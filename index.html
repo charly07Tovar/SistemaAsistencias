@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sistema para generar listas de asistencias">
+    <meta name="author" content="Carlos Ramírez, Maribel Pérez, Fabián Rivas">
+
+    <title>Check In System</title>
+
+</head>
+
+<body>
+
+    <h2>Formulario de Asistencia</h2>
+
+    <form>
+        <div class="form-group"></div>
+            <label for="nombreDocente">Nombre del Docente:</label>
+            <input type="text" id="nombreDocente" name="nombreDocente" required>
+        </div>
+        <div class="form-group">
+            <label for="periodo">Periodo:</label>
+            <select id="periodo" name="periodo" required>
+                <option value="">Seleccione un periodo</option>
+                <option value="cuatri1">Cuatrimestre 1</option>
+                <option value="cuatri2">Cuatrimestre 2</option>
+                <option value="cuatri3">Cuatrimestre 3</option>
+                <option value="cuatri4">Cuatrimestre 4</option>
+                <option value="cuatri5">Cuatrimestre 5</option>
+                <option value="cuatri6">Cuatrimestre 6</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaInicio">Fecha de Inicio Cuatrimestre:</label>
+            <input type="date" id="fechaInicio" name="fechaInicio" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaFin">Fecha de Fin de Cuatrimestre:</label>
+            <input type="date" id="fechaFin" name="fechaFin" required>
+        </div>
+
+        <div class="form-group">
+            <label for="asignatura">Asignatura:</label>
+            <input type="text" id="asignatura" name="asignatura" required>
+        </div>
+
+        <div class="form-group"></div>
+            <label for="horasPorDia">Horas por Día de Materia:</label>
+            <input type="number" id="horasPorDia" name="horasPorDia" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cantidadAlumnos">Cantidad de Alumnos:</label>
+            <input type="number" id="cantidadAlumnos" name="cantidadAlumnos" min="1" required>
+        </div>
+
+        <button type="button">Enviar</button>
+    </form>
+
+</body>
+
+</html>
