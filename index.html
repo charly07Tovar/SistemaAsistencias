@@ -4,37 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Asistencia</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Generar Lista de Asistencias</h1>
-    <form id="asistenciaForm" onsubmit="return generarLista()">
-        <label>Asignatura: <input type="text" id="asignatura" required></label><br>
-        <label>Docente: <input type="text" id="docente" required></label><br>
-        <label>Grupo: <input type="text" id="grupo" required></label><br>
-        <label>Periodo: <input type="text" id="periodo" required></label><br>
-        <label>Año: <input type="text" id="año" required></label><br>
-        <label>Fecha Inicio Cuatrimestre: <input type="date" id="inicioCuatrimestre" required></label><br>
-        <label>Fecha Fin Cuatrimestre: <input type="date" id="finCuatrimestre" required></label><br>
-        <label>Vacaciones Inicio: <input type="date" id="vacacionesInicio" required></label><br>
-        <label>Vacaciones Fin: <input type="date" id="vacacionesFin" required></label><br>
-        <label>Fecha Inicio Parcial 1: <input type="date" id="inicioParcial1" required></label><br>
-        <label>Fecha Fin Parcial 1: <input type="date" id="finParcial1" required></label><br>
-        <label>Fecha Inicio Parcial 2: <input type="date" id="inicioParcial2" required></label><br>
-        <label>Fecha Fin Parcial 2: <input type="date" id="finParcial2" required></label><br>
-        <label>Fecha Inicio Parcial 3: <input type="date" id="inicioParcial3" required></label><br>
-        <label>Fecha Fin Parcial 3: <input type="date" id="finParcial3" required></label><br>
-        <label>Cantidad de Alumnos: <input type="number" id="cantidadAlumnos" required></label><br>
-        <label>Horas por día (Lunes): <input type="number" id="horasLunes" required></label><br>
-        <label>Horas por día (Martes): <input type="number" id="horasMartes" required></label><br>
-        <label>Horas por día (Miércoles): <input type="number" id="horasMiercoles" required></label><br>
-        <label>Horas por día (Jueves): <input type="number" id="horasJueves" required></label><br>
-        <label>Horas por día (Viernes): <input type="number" id="horasViernes" required></label><br>
-        <label>Horas por día (Sábado): <input type="number" id="horasSabado" required></label><br>
-        <label>Días Inhábiles (separados por comas, formato aaaa-mm-dd): 
-            <input type="text" id="diasInhabiles" required></label><br>
-        <button type="submit">Generar Lista</button>
-    </form>
-    <script src="codigito.js"></script>
+    <div class="container">
+        <h1>Formulario de Lista de Asistencia</h1>
+        <form id="asistenciaForm" onsubmit="return enviarDatos()">
+            <div class="form-group">
+                <label>Asignatura: <input type="text" id="asignatura" required></label>
+                <label>Docente: <input type="text" id="docente" required></label>
+            </div>
+            <div class="form-group">
+                <label>Grupo: <input type="text" id="grupo" required></label>
+                <label>Periodo: <input type="text" id="periodo" required></label>
+                <label>Año: <input type="text" id="año" required></label>
+            </div>
+            <div class="form-group">
+                <label>Fecha Inicio Cuatrimestre: <input type="date" id="inicioCuatrimestre" required></label>
+                <label>Fecha Fin Cuatrimestre: <input type="date" id="finCuatrimestre" required></label>
+            </div>
+            <div class="form-group">
+                <label>Vacaciones Inicio: <input type="date" id="vacacionesInicio" required></label>
+                <label>Vacaciones Fin: <input type="date" id="vacacionesFin" required></label>
+            </div>
+            <div class="form-group">
+                <label>Fecha Inicio Parcial 1: <input type="date" id="inicioParcial1" required></label>
+                <label>Fecha Fin Parcial 1: <input type="date" id="finParcial1" required></label>
+            </div>
+            <div class="form-group">
+                <label>Fecha Inicio Parcial 2: <input type="date" id="inicioParcial2" required></label>
+                <label>Fecha Fin Parcial 2: <input type="date" id="finParcial2" required></label>
+            </div>
+            <div class="form-group">
+                <label>Fecha Inicio Parcial 3: <input type="date" id="inicioParcial3" required></label>
+                <label>Fecha Fin Parcial 3: <input type="date" id="finParcial3" required></label>
+            </div>
+            <div class="form-group">
+                <label>Cantidad de Alumnos: <input type="number" id="cantidadAlumnos" required></label>
+                <label>Días Inhábiles (formato aaaa-mm-dd, separados por comas): 
+                    <input type="text" id="diasInhabiles" required></label>
+            </div>
+            <div class="form-group">
+                <label>Horas por día (Lunes): <input type="number" id="horasLunes" required></label>
+                <label>Horas por día (Martes): <input type="number" id="horasMartes" required></label>
+                <label>Horas por día (Miércoles): <input type="number" id="horasMiercoles" required></label>
+                <label>Horas por día (Jueves): <input type="number" id="horasJueves" required></label>
+                <label>Horas por día (Viernes): <input type="number" id="horasViernes" required></label>
+                <label>Horas por día (Sábado): <input type="number" id="horasSabado" required></label>
+            </div>
+            <button type="submit" class="btn">Generar Lista</button>
+        </form>
+    </div>
+
+    <script src="Datos.js"></script>
 </body>
 </html>

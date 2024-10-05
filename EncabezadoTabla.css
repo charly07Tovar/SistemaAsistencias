@@ -1,0 +1,24 @@
+.tabla-encabezado {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.tabla-encabezado th, .tabla-encabezado td {
+    border: 1px solid #ddd;
+    padding: 10px; 
+    text-align: left;
+}
+
+.tabla-encabezado th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.tabla-encabezado tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-encabezado tr:hover {
+    background-color: #e0e0e0;
+}

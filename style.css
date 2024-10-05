@@ -1,31 +1,56 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h1 {
-    color: #333;
+    text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #28a745;
+input {
+    padding: 8px;
+    width: calc(100% - 16px);
+}
+
+.btn {
+    background-color: #4CAF50;
     color: white;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #218838;
+.btn:hover {
+    background-color: #45a049;
+}
+
+.tabla-asistencia {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-asistencia th, .tabla-asistencia td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-asistencia th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
