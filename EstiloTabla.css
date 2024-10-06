@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e0f7fa; /* Fondo azul pastel */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    /* background-color: #266c78; */
+    /* background-color: #519662; */
+    background-color: #266c78;
+    padding: 10px 25px;
+    box-shadow: 4px 4px 15px rgba(0, 0 , 0, 0.3);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 200;
+    font-family: 'Montserrat';
+}
+
+.container {
+    max-width: 1200px; /* El contenedor ahora puede ocupar hasta 1200px de ancho */
+    width: 95%; /* Ocupa el 95% del ancho de la página */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center;
+}
+
+.tabla-asistencia {
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil para la tabla */
+}
+
+.tabla-asistencia th, .tabla-asistencia td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.tabla-asistencia th {
+    background-color: #4db6ac; /* Azul pastel para los encabezados */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tabla-asistencia td {
+    background-color: #e0f2f1; /* Color suave para las celdas */
+}
+
+.tabla-asistencia tr:hover {
+    background-color: #b2dfdb; /* Efecto hover para resaltar filas */
+}
+
+/* Diseño responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .tabla-asistencia th, .tabla-asistencia td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

@@ -1,3 +1,4 @@
+/*Estilo formulario */
 body {
     font-family: Arial, sans-serif;
 }
@@ -118,10 +119,10 @@ input {
     text-align: center;
     font-size: 10px;
 }
-
-.tabla-asistencia th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+.form-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
