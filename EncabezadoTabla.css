@@ -1,24 +1,26 @@
 .tabla-encabezado {
     width: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border-collapse: collapse;
 }
 
 .tabla-encabezado th, .tabla-encabezado td {
     border: 1px solid #ddd;
-    padding: 10px; 
+    padding: 3px; 
     text-align: left;
+    font-size: 12px;
 }
 
 .tabla-encabezado th {
-    background-color: #f2f2f2;
+    background-color: #eff0f0;
     font-weight: bold;
+    font-size: 12px;
 }
 
 .tabla-encabezado tr:nth-child(even) {
-    background-color: #f9f9f9;
+    /* background-color: #eff0f0; */
 }
 
-.tabla-encabezado tr:hover {
+/* .tabla-encabezado tr:hover {
     background-color: #e0e0e0;
-}
+} */

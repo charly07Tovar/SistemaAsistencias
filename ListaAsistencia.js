@@ -16,16 +16,12 @@ window.onload = function() {
                     <th>Grupo:</th>
                     <td>${datosAsistencia.grupo}</td>
                     <th>Periodo:</th>
-                    <td>${datosAsistencia.periodo}</td>
+                    <td>${datosAsistencia.periodo} ${datosAsistencia.año}</td>
                 </tr>
                 <tr>
-                    <th>Año:</th>
-                    <td>${datosAsistencia.año}</td>
-                    <th>Inicio Cuatrimestre:</th>
+                    <th>Inicio cuatrimestre:</th>
                     <td>${datosAsistencia.inicioCuatrimestre}</td>
-                </tr>
-                <tr>
-                    <th>Fin Cuatrimestre:</th>
+                    <th>Fin cuatrimestre:</th>
                     <td>${datosAsistencia.finCuatrimestre}</td>
                 </tr>
             </table>

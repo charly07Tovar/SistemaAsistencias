@@ -44,6 +44,7 @@ input {
     width: calc(100% - 16px);
     border-radius: 10px;
     border-width: 0.1px;
+    text-align: center;
 }
 
 .cont_items{
@@ -61,7 +62,7 @@ input {
     box-shadow: 0.1px 1px 5px rgba(0, 0 , 0, 0.3);
     margin: 0;
     margin-bottom: 15px;
-    background-color: #d9f2de;
+    background-color: #eff0f0;
 }
 
 
@@ -84,19 +85,43 @@ input {
     color: #fff;
 }
 
+/*##############################################*/
+
+.container2{
+    border: 1px solid #000;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    box-shadow: 0.1px 1px 10px rgba(0, 0 , 0, 0.3);
+}
+
+.container-asistencias{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    padding-top: 5px;
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+
 .tabla-asistencia {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .tabla-asistencia th, .tabla-asistencia td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 5px;
     text-align: center;
+    font-size: 10px;
 }
 
 .tabla-asistencia th {
     background-color: #f2f2f2;
     font-weight: bold;
 }
+
+
