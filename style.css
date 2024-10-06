@@ -1,3 +1,4 @@
+/*Estilo formulario */
 body {
     font-family: Arial, sans-serif;
 }
@@ -83,24 +84,6 @@ input {
     background-color: #266c78;
     color: #fff;
 }
-
-.tabla-asistencia {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.tabla-asistencia th, .tabla-asistencia td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-.tabla-asistencia th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
 
 /* Estilo para select */
 input[type="text"],
