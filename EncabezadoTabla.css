@@ -17,10 +17,4 @@
     font-size: 12px;
 }
 
-.tabla-encabezado tr:nth-child(even) {
-    /* background-color: #eff0f0; */
-}
 
-/* .tabla-encabezado tr:hover {
-    background-color: #e0e0e0;
-} */

@@ -115,9 +115,9 @@ input {
 
 .tabla-asistencia th, .tabla-asistencia td {
     border: 1px solid #ddd;
-    padding: 5px;
+    padding: 1px;
     text-align: center;
-    font-size: 10px;
+    font-size: 7px;
 }
 
 /* Estilo para select */

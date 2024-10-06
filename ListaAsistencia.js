@@ -23,18 +23,15 @@ window.onload = function() {
                     <th>Grupo:</th>
                     <td>${datosAsistencia.grupo}</td>
                     <th>Periodo:</th>
-                    <td>${datosAsistencia.periodo}</td>
+                    <td>${datosAsistencia.periodo} ${datosAsistencia.año}</td>
                 </tr>
                 <tr>
-                    <th>Año:</th>
-                    <td>${datosAsistencia.año}</td>
                     <th>Inicio Cuatrimestre:</th>
                     <td>${datosAsistencia.inicioCuatrimestre}</td>
-                </tr>
-                <tr>
                     <th>Fin Cuatrimestre:</th>
                     <td>${datosAsistencia.finCuatrimestre}</td>
                 </tr>
+               
             </table>
         `;
         document.getElementById('encabezadoAsistencia').innerHTML = encabezadoHtml;
@@ -118,7 +115,7 @@ window.onload = function() {
         for (let mes of meses) {
             const mesIndex = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"].indexOf(mes);
             const numDias = díasPorMes[meses.indexOf(mes)];
-            const diasDeLaSemana = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+            const diasDeLaSemana = ['D', 'L', 'M', 'Mi', 'J', 'V', 'S'];
 
             for (let j = 1; j <= numDias; j++) {
                 const fechaActual = new Date(año, mesIndex, j);
