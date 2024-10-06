@@ -119,10 +119,27 @@ input {
     text-align: center;
     font-size: 10px;
 }
-.form-group label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+/* Estilo para select */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; 
+    box-sizing: border-box; 
 }
+select {
+    background-color: white; 
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none;
+}
+
 
 
