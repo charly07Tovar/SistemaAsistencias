@@ -2,6 +2,15 @@ window.onload = function() {
     const datosAsistencia = JSON.parse(localStorage.getItem('datosAsistencia'));
 
     if (datosAsistencia) {
+        const horasPorDia = {
+            lunes: parseInt(datosAsistencia.horasLunes),
+            martes: parseInt(datosAsistencia.horasMartes),
+            miercoles: parseInt(datosAsistencia.horasMiercoles),
+            jueves: parseInt(datosAsistencia.horasJueves),
+            viernes: parseInt(datosAsistencia.horasViernes),
+            sabado: parseInt(datosAsistencia.horasSabado),
+        };
+
         const encabezadoHtml = `
             <table class="tabla-encabezado">
                 <tr>
@@ -58,6 +67,23 @@ window.onload = function() {
             `${año}-12-25`
         ];
 
+        function obtenerRepeticionesDia(fecha) {
+            switch (fecha.getDay()) {
+                case 1: return horasPorDia.lunes;     // Lunes
+                case 2: return horasPorDia.martes;    // Martes
+                case 3: return horasPorDia.miercoles; // Miércoles
+                case 4: return horasPorDia.jueves;    // Jueves
+                case 5: return horasPorDia.viernes;   // Viernes
+                case 6: return horasPorDia.sabado;    // Sábado
+                default: return 0;                    // Domingo (no se incluye)
+            }
+        }
+
+        function esDiaValido(fechaActual, diasFestivos) {
+            const fechaString = fechaActual.toISOString().split('T')[0];
+            return (fechaActual.getDay() !== 0 && !diasFestivos.includes(fechaString));
+        }
+
         // Generar la tabla con el diseño modificado
         let tablaHtml = `
             <thead>
@@ -74,11 +100,8 @@ window.onload = function() {
             // Contar solo los días no festivos y no domingos
             for (let j = 1; j <= numDias; j++) {
                 const fechaActual = new Date(año, mesIndex, j);
-                const fechaString = fechaActual.toISOString().split('T')[0];
-
-                // Mostrar los sábados (getDay() === 6), excluir domingos (getDay() === 0)
-                if (fechaActual.getDay() !== 0 && !diasFestivos.includes(fechaString)) {
-                    diasActivos++;
+                if (esDiaValido(fechaActual, diasFestivos)) {
+                    diasActivos += obtenerRepeticionesDia(fechaActual); // Contar repeticiones según las horas
                 }
             }
 
@@ -99,11 +122,12 @@ window.onload = function() {
 
             for (let j = 1; j <= numDias; j++) {
                 const fechaActual = new Date(año, mesIndex, j);
-                const fechaString = fechaActual.toISOString().split('T')[0];
 
-                // Mostrar sábados pero excluir domingos
-                if (fechaActual.getDay() !== 0 && !diasFestivos.includes(fechaString)) {
-                    tablaHtml += `<th>${j}<br>${diasDeLaSemana[(j + new Date(año, mesIndex, 1).getDay() - 1) % 7]}</th>`;
+                if (esDiaValido(fechaActual, diasFestivos)) {
+                    const repeticiones = obtenerRepeticionesDia(fechaActual);
+                    for (let r = 0; r < repeticiones; r++) {
+                        tablaHtml += `<th>${j}<br>${diasDeLaSemana[fechaActual.getDay()]}</th>`;
+                    }
                 }
             }
         }
@@ -127,11 +151,12 @@ window.onload = function() {
 
                 for (let j = 1; j <= numDias; j++) {
                     const fechaActual = new Date(año, mesIndex, j);
-                    const fechaString = fechaActual.toISOString().split('T')[0];
 
-                    // Mostrar sábados pero excluir domingos
-                    if (fechaActual.getDay() !== 0 && !diasFestivos.includes(fechaString)) {
-                        tablaHtml += `<td></td>`;
+                    if (esDiaValido(fechaActual, diasFestivos)) {
+                        const repeticiones = obtenerRepeticionesDia(fechaActual);
+                        for (let r = 0; r < repeticiones; r++) {
+                            tablaHtml += `<td></td>`;
+                        }
                     }
                 }
             }
